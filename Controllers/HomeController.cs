@@ -136,6 +136,22 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "B",
                     Explanation = "SectionId is the Foreign Key property that links the Student entity to the primary key of the Section table"
+                },
+
+                // Item 9
+                new ExamQuestions
+                {
+                    Id = 9,
+                    Question = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                    Options = new()
+                    {
+                        "A - It stores the database password",
+                        "B - It represents a relationship to another entity",
+                        "C - It creates a new database",
+                        "D - It validates the student's name"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "A navigation property provides a reference representing a relationship to another entity, allowing the core to navigate and load related data."
                 }
 
             };
