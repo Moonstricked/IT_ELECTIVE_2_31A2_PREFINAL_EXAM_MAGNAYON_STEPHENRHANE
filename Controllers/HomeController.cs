@@ -231,7 +231,39 @@ namespace PrefinalExamApp.Controllers
                         "D - Client-side validation cannot display messages"
                     },
                     CorrectAnswer = "A",
-                    Explanation = "Client-side validation can easily be bypassed by disabling JavaScript or using tools like Postman/curl, so server-side validation is required for security."
+                    Explanation = "Client side validation can easily be bypassed by disabling JavaScript or using tools like Postman/curl, so server-side validation is required for security."
+                },
+
+                // Item 15
+                new ExamQuestions
+                {
+                    Id = 15,
+                    Question = "A school requires every student to have a unique Student Number. Which rule best represents this requirement?",
+                    Options = new()
+                    {
+                        "A - Student Number should always be nullable",
+                        "B - Student Number should be unique",
+                        "C - Student Number should always be the same",
+                        "D - Student Number should contain only spaces"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "A uniqueness constraint guarantees that every student record possesses a distinct Student number."
+                },
+
+                // Item 16
+                new ExamQuestions
+                {
+                    Id = 16,
+                    Question = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
+                    Options = new()
+                    {
+                        "A - It protects data integrity even if application-level validation is bypassed",
+                        "B - It makes Razor Views render faster",
+                        "C - It removes the need for a Controller",
+                        "D - It automatically creates a ViewModel"
+                    },
+                    CorrectAnswer = "A",
+                    Explanation = "A database level unique constraint acts as the final way of protecting data integrity even if appcode fails."
                 }
 
             };
