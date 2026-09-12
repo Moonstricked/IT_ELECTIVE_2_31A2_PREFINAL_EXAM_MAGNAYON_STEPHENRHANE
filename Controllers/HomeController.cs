@@ -39,6 +39,22 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "B",
                     Explanation = "The Database-First approach reverse engineers an existing database schema to automatically generate entity classes and a DbContext."
+                },
+
+                // Item 3
+                new ExamQuestions
+                {
+                    Id = 3,
+                    Question = "What is the primary purpose of Entity Framework Core?",
+                    Options = new()
+                    {
+                        "A - To create HTML pages automatically",
+                        "B - To replace the MVC Controller",
+                        "C - To map objects in code to relational database data",
+                        "D - To replace the C# compiler"
+                    },
+                    CorrectAnswer = "C",
+                    Explanation = "Entity Framework Core is an Object-Relational Mapper (ORM) designed to bridge and map object-oriented C# models to relational database tables."
                 }
             };
 
