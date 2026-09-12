@@ -264,7 +264,40 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "A",
                     Explanation = "A database level unique constraint acts as the final way of protecting data integrity even if appcode fails."
+                },
+
+                // Item 17
+                new ExamQuestions
+                {
+                    Id = 17,
+                    Question = "What is the purpose of a try...catch block in a controller?",
+                    Options = new()
+                    {
+                        "A - To create navigation properties",
+                        "B - To catch and handle exceptions that may occur during execution",
+                        "C - To generate database tables",
+                        "D - To perform client-side validation"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "A try/catch block catches exceptions, enabling the controller to handle errors without crashing the app"
+                },
+
+                // Item 18
+                new ExamQuestions
+                {
+                    Id = 18,
+                    Question = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                    Options = new()
+                    {
+                        "A - UseDatabase()",
+                        "B - UseExceptionHandler()",
+                        "C - UseValidationHandler()",
+                        "D - UseMvcDatabase()"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "UseExceptionHandler() catches unhandled exceptions globally across the core HTTP request pipeline."
                 }
+
 
             };
 
