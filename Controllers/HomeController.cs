@@ -9,6 +9,7 @@ namespace PrefinalExamApp.Controllers
         {
             var questions = new List<ExamQuestions>
             {
+                // this would be so much easier if automated but i will stay strong and drink my 3rd cup of coffee today
                 // Item 1
                 new ExamQuestions
                 {
@@ -55,6 +56,22 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "C",
                     Explanation = "Entity Framework Core is an Object-Relational Mapper (ORM) designed to bridge and map object-oriented C# models to relational database tables."
+                },
+
+                // Item 4
+                new ExamQuestions
+                {
+                    Id = 4,
+                    Question = "Which EF Core component is primarily responsible for communicating with the database?",
+                    Options = new()
+                    {
+                        "A - DbContext",
+                        "B - DbSetView",
+                        "C - ControllerContext",
+                        "D - RazorContext"
+                    },
+                    CorrectAnswer = "A",
+                    Explanation = "The DbContext instance manages database connections, executes queries, tracks entity changes, and saves changes back to the database."
                 }
             };
 
