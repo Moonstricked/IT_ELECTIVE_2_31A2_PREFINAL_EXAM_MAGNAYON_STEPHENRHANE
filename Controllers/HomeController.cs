@@ -200,6 +200,38 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "A",
                     Explanation = "Include(s => s.Section) eagerly loads the associated Section navigation property for each Student in just one SQL query."
+                },
+
+                // Item 13
+                new ExamQuestions
+                {
+                    Id = 13,
+                    Question = "Which type of validation occurs in the browser before a request is sent to the server?",
+                    Options = new()
+                    {
+                        "A - Database-level validation",
+                        "B - Client-side validation",
+                        "C - Server-side validation",
+                        "D - EF Core migration validation"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "Client-side validation happens directly in the browser via HTML5 attributes or JavaScript before the form data is submitted across the network."
+                },
+
+                // Item 14
+                new ExamQuestions
+                {
+                    Id = 14,
+                    Question = "Why is server-side validation still necessary if client-side validation exists?",
+                    Options = new()
+                    {
+                        "A - Client-side validation can be bypassed",
+                        "B - Client-side validation automatically modifies the database",
+                        "C - Server-side validation only works with SQLite",
+                        "D - Client-side validation cannot display messages"
+                    },
+                    CorrectAnswer = "A",
+                    Explanation = "Client-side validation can easily be bypassed by disabling JavaScript or using tools like Postman/curl, so server-side validation is required for security."
                 }
 
             };
