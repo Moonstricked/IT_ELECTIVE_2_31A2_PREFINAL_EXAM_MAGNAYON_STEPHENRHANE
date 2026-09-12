@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PrefinalExamApp.Models.ExamQuestions>
+
+@{
+    ViewData["Title"] = "IT Elective 2 - Prefinal Exam";
+}
+<!-- stack overflow and neocities yet again saving me with templates istg i wouldn't be here without em -->
+<div class="container py-4">
+    <div class="p-4 mb-4 bg-light rounded-3 shadow-sm border text-center">
+        <h2 class="display-6 fw-bold text-primary">prefinal exams owo</h2>
+        <h4 class="text-secondary">i miss using ren'py bring me back to those times</h4>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var q in Model)
+        {
+            <div class="col-12">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Question #@q.Id</span>
+                        <span class="badge bg-success">Answer: @q.CorrectAnswer.Substring(0, 1)</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-dark mb-3">@q.Question</h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            @foreach (var opt in q.Options)
+                            {
+                                bool isCorrect = opt.StartsWith(q.CorrectAnswer.Substring(0, 2));
+                                <li class="list-group-item @(isCorrect ? "list-group-item-success fw-bold" : "")">
+                                    @opt @(isCorrect ? " ✔" : "")
+                                </li>
+                            }
+                        </ul>
+                        <div class="alert alert-info mb-0 py-2">
+                            <strong>Explanation:</strong> @q.Explanation
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
