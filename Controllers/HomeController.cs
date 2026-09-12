@@ -152,6 +152,22 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "B",
                     Explanation = "A navigation property provides a reference representing a relationship to another entity, allowing the core to navigate and load related data."
+                },
+
+                // Item 10 - i might start doing these by twos i think i have enough commits
+                new ExamQuestions
+                {
+                    Id = 10,
+                    Question = "What does .Include() generally allow EF Core to do?",
+                    Options = new()
+                    {
+                        "A - Delete the Section table",
+                        "B - Load related Section data together with Students",
+                        "C - Create a new Student",
+                        "D - Validate Student input"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "The 'include' method enables 'eager loading', directing the core to fetch related data in the same database query."
                 }
 
             };
