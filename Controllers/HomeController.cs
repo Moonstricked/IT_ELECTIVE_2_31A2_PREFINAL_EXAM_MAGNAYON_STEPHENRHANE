@@ -72,6 +72,22 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "A",
                     Explanation = "The DbContext instance manages database connections, executes queries, tracks entity changes, and saves changes back to the database."
+                },
+
+                // Item 5
+                new ExamQuestions
+                {
+                    Id = 5,
+                    Question = "What does the following command primarily do? dotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                    Options = new()
+                    {
+                        "A - Deletes the database",
+                        "B - Creates a new MVC project",
+                        "C - Generates EF Core models and a DbContext from an existing database",
+                        "D - Starts the MVC application"
+                    },
+                    CorrectAnswer = "C",
+                    Explanation = "The dotnet ef dbcontext scaffold command performs reverse-engineering on an existing database schema to generate entity classes and a DbContext inside the specified folder."
                 }
             };
 
