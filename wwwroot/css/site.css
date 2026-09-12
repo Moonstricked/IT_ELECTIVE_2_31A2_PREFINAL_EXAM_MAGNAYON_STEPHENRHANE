@@ -1,31 +1,151 @@
-html {
-  font-size: 14px;
-}
+/* i might as well make it look pretty right??? */
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jersey 20', sans-serif;
+    color: #222;
+    background: repeating-linear-gradient( to right, #42052b 0%, #42052b 8.33%, #5e083e 8.33%, #5e083e 16.66%, #7d0c52 16.66%, #7d0c52 25%, #9d1066 25%, #9d1066 33.33%, #bd157b 33.33%, #bd157b 41.66%, #cf1b88 41.66%, #cf1b88 50%, #cf1b88 50%, #cf1b88 58.33%, #bd157b 58.33%, #bd157b 66.66%, #9d1066 66.66%, #9d1066 75%, #7d0c52 75%, #7d0c52 83.33%, #5e083e 83.33%, #5e083e 91.66%, #42052b 91.66%, #42052b 100% );
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
+    letter-spacing: 0.5px;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.page-title-banner {
+    text-align: center;
+    color: white;
+    font-size: 46px;
+    margin: 30px 0 15px 0;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+main.uni-container {
+    margin: 15px auto 40px auto;
+    max-width: 65%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border: 5px solid white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* HEADINGS */
+h1, h2 {
+    color: #ec2e64;
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #7d0c52;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #7d0c52;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #ec2e64;
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+/* STUDENT INFO STRIP */
+.student-strip {
+    background-color: #ffffff;
+    border: 3px solid #ec2e64;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 24px;
+    color: #333;
+}
+
+    .student-strip strong {
+        color: #ec2e64;
+    }
+
+/* QUESTION SECTIONS */
+.question-block {
+    background: #ffffff;
+    border: 3px solid white;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.question-prompt {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* OPTIONS LIST */
+.options-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.option-item {
+    font-size: 24px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    color: #334155;
+}
+
+    .option-item.selected-answer {
+        background-color: #ffe4ec;
+        border: 3px solid #ec2e64;
+        color: #b21447;
+        font-weight: bold;
+    }
+
+/* EXPLANATION BOX */
+.explanation-box {
+    background-color: #fff1f5;
+    border-left: 5px solid #ec2e64;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #475569;
+}
+
+    .explanation-box strong {
+        color: #ec2e64;
+    }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    color: white;
+    font-size: 22px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
 }

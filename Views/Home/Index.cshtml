@@ -1,44 +1,51 @@
 ﻿@model IEnumerable<PrefinalExamApp.Models.ExamQuestions>
 
 @{
-    ViewData["Title"] = "IT Elective 2 - Prefinal Exam";
+    ViewData["Title"] = "Prefinals Examination";
 }
-<!-- stack overflow and neocities yet again saving me with templates istg i wouldn't be here without em -->
-<div class="container py-4">
-    <div class="p-4 mb-4 bg-light rounded-3 shadow-sm border text-center">
-        <h2 class="display-6 fw-bold text-primary">prefinal exams!!! owo</h2>
-        <h4 class="text-secondary">i miss using ren'py bring me back to those times</h4>
-        <br />
-        <h4 class="text-secondary">this index.cshtml is made using a template because i despise messing around with html and css :3</h4>
 
+<!-- Google Fonts owo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+
+<!-- Header navigation bar -->
+<div id="top"></div>
+<div class="page-title-banner">Prefinal Exam Answers!!! :3</div>
+
+<main class="uni-container">
+    <section>
+        <h1>IT ELECTIVE 2</h1>
+        <h2>i had a few more minutes so i decided to make the site look pretty</h2>
+        <h4>shoutout to my friend for letting me take inspiration from his site :3</h4>
+    </section>
+
+    <!-- Student details banner -->
+    <div class="student-strip">
+        <div><strong>STUDENT:</strong> Stephen Rhane L. Magnayon</div>
+        <div><strong>SECTION:</strong> BSIT 31E2</div>
     </div>
 
-    <div class="row g-4">
-        @foreach (var q in Model)
-        {
-            <div class="col-12">
-                <div class="card shadow-sm border-0 h-100">
-                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-                        <span class="fw-bold">Question #@q.Id</span>
-                        <span class="badge bg-success">Answer: @q.CorrectAnswer.Substring(0, 1)</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-dark mb-3">@q.Question</h5>
-                        <ul class="list-group list-group-flush mb-3">
-                            @foreach (var opt in q.Options)
-                            {
-                                bool isCorrect = opt.StartsWith(q.CorrectAnswer.Substring(0, 2));
-                                <li class="list-group-item @(isCorrect ? "list-group-item-success fw-bold" : "")">
-                                    @opt @(isCorrect ? " ✔" : "")
-                                </li>
-                            }
-                        </ul>
-                        <div class="alert alert-info mb-0 py-2">
-                            <strong>Explanation:</strong> @q.Explanation
-                        </div>
-                    </div>
-                </div>
+    <!-- Questions list -->
+    @foreach (var q in Model)
+    {
+        <section class="question-block" id="q-@q.Id">
+            <h3>Question #@q.Id (Answer: @q.CorrectAnswer)</h3>
+            <p class="question-prompt">@q.Question</p>
+
+            <ul class="options-list">
+                @foreach (var opt in q.Options)
+                {
+                    bool isCorrect = opt.StartsWith(q.CorrectAnswer + " -");
+                    <li class="option-item @(isCorrect ? "selected-answer" : "")">
+                        @(isCorrect ? "★ " : "○ ") @opt
+                    </li>
+                }
+            </ul>
+
+            <div class="explanation-box">
+                <strong>why:</strong> @q.Explanation
             </div>
-        }
-    </div>
-</div>
+        </section>
+    }
+</main>
