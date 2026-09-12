@@ -167,7 +167,39 @@ namespace PrefinalExamApp.Controllers
                         "D - Validate Student input"
                     },
                     CorrectAnswer = "B",
-                    Explanation = "The 'include' method enables 'eager loading', directing the core to fetch related data in the same database query."
+                    Explanation = "The 'include' method enables 'eager loading', directing the core to fetch related data in the same database query"
+                },
+
+                // Item 11
+                new ExamQuestions
+                {
+                    Id = 11,
+                    Question = "Why might a ViewModel be used when displaying Student and Section information?",
+                    Options = new()
+                    {
+                        "A - To replace the database",
+                        "B - To combine or shape the data specifically needed by the view",
+                        "C - To automatically create database tables",
+                        "D - To prevent controllers from using LINQ"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "ViewModels combine and shape data from multiple domain entities to present exactly what a specific view needs without exposing too much"
+                },
+
+                // Item 12
+                new ExamQuestions
+                {
+                    Id = 12,
+                    Question = "Consider this query: var students = _context.Students.Include(s => s.Section).ToList(); What is the main benefit of Include(s => s.Section)?",
+                    Options = new()
+                    {
+                        "A - It loads the related Section navigation property",
+                        "B - It creates a Section object manually",
+                        "C - It removes the foreign key",
+                        "D - It prevents the query from accessing the database"
+                    },
+                    CorrectAnswer = "A",
+                    Explanation = "Include(s => s.Section) eagerly loads the associated Section navigation property for each Student in just one SQL query."
                 }
 
             };
