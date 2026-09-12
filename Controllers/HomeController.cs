@@ -88,7 +88,25 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "C",
                     Explanation = "The dotnet ef dbcontext scaffold command performs reverse-engineering on an existing database schema to generate entity classes and a DbContext inside the specified folder."
+                },
+
+                 // Item 6
+                new ExamQuestions
+                {
+                    Id = 6,
+                    Question = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                    Options = new()
+                    {
+                        "A - Program.cs only",
+                        "B - appsettings.json",
+                        "C - Index.cshtml",
+                        "D - Student.cs"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "application configurations and database connection strings are stored in appsettings.json."
                 }
+
+
             };
 
             return View(questions);
