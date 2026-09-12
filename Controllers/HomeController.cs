@@ -296,6 +296,38 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "B",
                     Explanation = "UseExceptionHandler() catches unhandled exceptions globally across the core HTTP request pipeline."
+                },
+
+                // Item 19
+                new ExamQuestions
+                {
+                    Id = 19,
+                    Question = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                    Options = new()
+                    {
+                        "A - Display the student's information anyway",
+                        "B - Display a Not Found (404) response/page",
+                        "C - Delete Student 999",
+                        "D - Create Student 999 automatically"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "status code 404 is the standard response informing the client that the requested resource can't be found"
+                },
+
+                // Item 20
+                new ExamQuestions
+                {
+                    Id = 20,
+                    Question = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                    Options = new()
+                    {
+                        "A - Data integrity",
+                        "B - HTML formatting",
+                        "C - CSS inheritance",
+                        "D - Razor syntax"
+                    },
+                    CorrectAnswer = "A",
+                    Explanation = "Preventing duplicate assignments prevents corrupting student course records."
                 }
 
 
