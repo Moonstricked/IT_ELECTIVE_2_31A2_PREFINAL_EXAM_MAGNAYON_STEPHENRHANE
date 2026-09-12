@@ -104,7 +104,23 @@ namespace PrefinalExamApp.Controllers
                     },
                     CorrectAnswer = "B",
                     Explanation = "application configurations and database connection strings are stored in appsettings.json."
-                }
+                },
+
+                 // Item 7
+                new ExamQuestions
+                {
+                    Id = 7,
+                    Question = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                    Options = new()
+                    {
+                        "A - One-to-One",
+                        "B - One-to-Many",
+                        "C - Many-to-Many",
+                        "D - Many-to-One only"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "Because a single Section has multiple Students, this represents a One to Many relationship."
+                },
 
 
             };
