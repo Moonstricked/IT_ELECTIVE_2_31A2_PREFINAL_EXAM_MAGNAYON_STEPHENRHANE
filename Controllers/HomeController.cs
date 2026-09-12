@@ -122,6 +122,21 @@ namespace PrefinalExamApp.Controllers
                     Explanation = "Because a single Section has multiple Students, this represents a One to Many relationship."
                 },
 
+                // Item 8
+                new ExamQuestions
+                {
+                    Id = 8,
+                    Question = "In the following example, what is SectionId? public int SectionId { get; set; } public Section Section { get; set; }",
+                    Options = new()
+                    {
+                        "A - Primary key of Student",
+                        "B - Foreign key referencing Section",
+                        "C - Navigation property",
+                        "D - Database connection string"
+                    },
+                    CorrectAnswer = "B",
+                    Explanation = "SectionId is the Foreign Key property that links the Student entity to the primary key of the Section table"
+                }
 
             };
 
